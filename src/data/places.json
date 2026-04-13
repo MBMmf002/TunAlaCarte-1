@@ -3,40 +3,45 @@
     "id": 1,
     "name": "Sidi Bou Said",
     "type": "Coastal Village",
-    "coords": [36.8702, 10.3392],
-    "image": "assets/places/sidi_bou_said.jpg",
+    "lat": 36.8702,
+    "lng": 10.3392,
+    "image": "/assets/places/sidi_bou_said.jpg",
     "description": "The iconic blue and white village."
   },
   {
     "id": 2,
     "name": "El Jem Coliseum",
-    "type": "amphitheater",
-    "coords": [35.2964, 10.7065],
-    "image": "assets/places/el_jem.jpg",
+    "type": "Amphitheater",
+    "lat": 35.2964,
+    "lng": 10.7065,
+    "image": "/assets/places/el_jem.jpg",
     "description": "The third largest amphitheater in the world."
   },
   {
     "id": 3,
     "name": "Carthage",
     "type": "Ruins",
-    "coords": [36.8928, 10.1797],
-    "image": "assets/places/carthage.jpg",
+    "lat": 36.8928,
+    "lng": 10.1797,
+    "image": "/assets/places/carthage.jpg",
     "description": "Ancient Phoenician city and UNESCO World Heritage site."
   },
   {
     "id": 4,
     "name": "Sahara Desert",
     "type": "Troglodyte Village",
-    "coords": [33.5092, 9.9748],
-    "image": "assets/places/sahara_desert.jpg",
+    "lat": 33.5092,
+    "lng": 9.9748,
+    "image": "/assets/places/sahara_desert.jpg",
     "description": "Famous for its underground homes."
-    },
-    {
-        "id": 5,
-        "name": "Djerba",
-        "type": "Island",
-        "coords": [33.8070, 10.8510],
-        "image": "assets/places/djerba.jpg",
-        "description": "A popular island destination with beautiful beaches."
-    }
+  },
+  {
+    "id": 5,
+    "name": "Djerba",
+    "type": "Island",
+    "lat": 33.8070,
+    "lng": 10.8510,
+    "image": "/assets/places/djerba.jpg",
+    "description": "A popular island destination with beautiful beaches."
+  }
 ]
