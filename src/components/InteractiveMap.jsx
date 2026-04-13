@@ -10,15 +10,13 @@ const InteractiveMap = () => {
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         />
-        {places.map(place => (
-          <Marker key={place.id} position={place.coords}>
-            <Popup>
-              <div className="font-sans">
-                <h3 className="font-bold text-blue-900">{place.name}</h3>
-                <p className="text-xs text-gray-600">{place.description}</p>
-              </div>
-            </Popup>
-          </Marker>
+        {places.map((place) => (
+            <Marker 
+                key={place.id} 
+                position={[place.lat, place.lng]} 
+            >
+                <Popup>{place.name}</Popup>
+            </Marker>
         ))}
       </MapContainer>
     </div>

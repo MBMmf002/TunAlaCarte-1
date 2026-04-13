@@ -9,7 +9,7 @@ function App() {
       <motion.header 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="h-[60vh] bg-[url('/public/assets/tunis-hero.jpg')] bg-cover bg-center flex items-center justify-center relative"
+        className="h-[60vh] bg-[url('/assets/tunis-hero.jpg')] bg-cover bg-center flex items-center justify-center relative"
       >
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center">
