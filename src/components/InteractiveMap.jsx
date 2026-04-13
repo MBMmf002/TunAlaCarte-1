@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import places from '../data/places.json';
 
-// Fix for Leaflet default icon bug in React
+// Fix for default Leaflet icons in React
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -16,32 +16,33 @@ const InteractiveMap = () => {
   const center = [33.8869, 9.5375]; // Tunisia Center
 
   return (
-    <div className="h-[500px] w-full z-0">
+    <div className="h-[500px] w-full z-0 rounded-xl overflow-hidden shadow-inner">
       <MapContainer 
         center={center} 
         zoom={6} 
         style={{ height: '100%', width: '100%' }}
+        scrollWheelZoom={false}
       >
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-          attribution='&copy; OpenStreetMap contributors'
+          attribution='&copy; <a href="https://carto.com/">CARTO</a>'
         />
 
         {places.map((place) => {
-          // Safety check for coordinates
+          // Verify coordinates exist to prevent 'undefined' crash
           if (!place.lat || !place.lng) return null;
 
           return (
             <Marker key={place.id} position={[place.lat, place.lng]}>
               <Popup>
-                <div className="text-center">
+                <div className="text-center p-1">
                   <img 
                     src={place.image} 
                     alt={place.name} 
-                    className="w-full h-24 object-cover rounded mb-2" 
+                    className="w-full h-20 object-cover rounded mb-2" 
                   />
-                  <h3 className="font-bold">{place.name}</h3>
-                  <p className="text-xs text-gray-500">{place.type}</p>
+                  <h3 className="font-bold text-tunis-blue">{place.name}</h3>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-500">{place.type}</p>
                 </div>
               </Popup>
             </Marker>
